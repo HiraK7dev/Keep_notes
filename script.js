@@ -4,7 +4,11 @@ const nav = document.getElementsByClassName(`nav`);
 
 //main
 const main = document.createElement(`div`);
-main.id = `main`; 
+main.id = `main`;
+const list = JSON.parse(localStorage.getItem(`cardData`)) || [];
+list.forEach(element => {
+    main.innerHTML = main.innerHTML + `<div class = "card"><h3>${element.title}</h3><br><p>${element.content}</p></div>`;
+});
 header.after(main);
 main.style.display = `flex`;
 

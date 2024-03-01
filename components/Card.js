@@ -1,13 +1,14 @@
 class Card{
     constructor(title, content){
-        const card = document.createElement(`div`);
-        card.className = `card`;
-        card.innerHTML = `<h3>${title}</h3><br><p>${content}</p>`;
-        main.append(card);
+        this.title = title;
+        this.content = content
     }
 }
 
-const newCard = new Card(`Hello`, `Welcone to Keep Note`);
-// localStorage.setItem(1, main.innerHTML);
-// const hello = localStorage.getItem(1);
-// console.log(hello);
+let CardData = JSON.parse(localStorage.getItem(`cardData`)) || [
+    new Card(
+        `Welcome to Keep Notes!`,
+        `We're thrilled to have you join our community of note-takers, organizers, and idea creators. With Keep Notes, you've got the perfect tool to capture your thoughts, make lists, and keep your life organized—all in one place.`
+    )
+];
+localStorage.setItem(`cardData`, `${JSON.stringify(CardData)}`);

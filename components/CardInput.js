@@ -10,3 +10,15 @@ inputButton.innerText = `CREATE NEW`;
 CardInput.append(inputButton);
 
 create.prepend(CardInput);
+
+inputButton.addEventListener(`click`, () => {
+    let card = JSON.parse(localStorage.getItem(`cardData`)) || [];
+    card.push(
+        new Card(
+            `${inputHeading.value}`,
+            `${inputDescription.value}`
+        )
+    );
+    localStorage.setItem(`cardData`, `${JSON.stringify(card)}`);
+    setTimeout(() => {location.reload()}, 500);
+})
