@@ -1,0 +1,8 @@
+#AboutPage{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    width: 80%;
+    margin: 5px 0px 0px 0px;
+    padding: 15px;
+}

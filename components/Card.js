@@ -8,3 +8,6 @@ class Card{
 }
 
 const newCard = new Card(`Hello`, `Welcone to Keep Note`);
+// localStorage.setItem(1, main.innerHTML);
+// const hello = localStorage.getItem(1);
+// console.log(hello);

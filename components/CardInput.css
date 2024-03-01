@@ -1,0 +1,45 @@
+#CardInput{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 60%;
+    width: 80%;
+    background: rgba(255, 255, 255, 0.09);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+}
+#inputHeading, #inputDescription{
+    width: 80%;
+    padding: 10px;
+    border: 0;
+    background: rgba(255, 255, 255, 0.04);
+    border-radius: 12px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+}
+#inputHeading{
+    height: 8%;
+}
+#inputDescription{
+    height: 50%;
+}
+#inputButton{
+    width: 85%;
+    height: 10%;
+    padding: 10px;
+    background: rgba(255, 255, 255, 0);
+    border-radius: 12px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(3.4px);
+    -webkit-backdrop-filter: blur(3.4px);
+    border: 1px solid rgba(255, 255, 255, 0.50);
+    transition: all;
+    transition-duration: 2s;
+}
+#inputButton:hover{
+    letter-spacing: 4px;
+}
