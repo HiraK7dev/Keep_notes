@@ -13,8 +13,17 @@ create.prepend(CardInput);
 
 inputButton.addEventListener(`click`, () => {
     let card = JSON.parse(localStorage.getItem(`cardData`)) || [];
+    let i;
+    if(card.length > 0){
+        i = card[card.length - 1].id;
+        ++i;
+    }
+    else{
+        i = 0;
+    }
     card.push(
         new Card(
+            `${i}`,
             `${inputHeading.value}`,
             `${inputDescription.value}`
         )
