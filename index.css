@@ -87,3 +87,24 @@ body{
     backdrop-filter: blur(17px);
     -webkit-backdrop-filter: blur(17px);
 }
+.deleteButton, .view{
+    font-size: 10px;
+    padding: 4px 12px 4px 12px;
+    border: 0;
+    color: rgba(255, 88, 88, 0.59);
+    border: 1px solid rgba(255, 88, 88, 0.59);
+    border-radius: 6px;
+    background-color: transparent;
+    transition: all;
+    transition-duration: 1s;
+}
+.deleteButton:hover{
+    background-color: rgba(255, 88, 88, 0.59);
+    color: wheat;
+    padding: 4px 50px 4px 50px;
+    letter-spacing: 3px;
+}
+.view:hover{
+    padding: 4px 40px 4px 40px;
+    letter-spacing: 5px;
+}
