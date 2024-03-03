@@ -19,6 +19,7 @@ body{
     align-items: center;
     height: 100%;
     width: 390px;
+    z-index: 0;
 }
 #header{
     display: flex;
@@ -87,7 +88,7 @@ body{
     backdrop-filter: blur(17px);
     -webkit-backdrop-filter: blur(17px);
 }
-.deleteButton, .view{
+.deleteButton, .view, #elClose{
     font-size: 10px;
     padding: 4px 12px 4px 12px;
     border: 0;
@@ -98,7 +99,7 @@ body{
     transition: all;
     transition-duration: 1s;
 }
-.deleteButton:hover{
+.deleteButton:hover, #elClose:hover{
     background-color: rgba(255, 88, 88, 0.59);
     color: wheat;
     padding: 4px 50px 4px 50px;

@@ -7,7 +7,7 @@ const main = document.createElement(`div`);
 main.id = `main`;
 const list = JSON.parse(localStorage.getItem(`cardData`)) || [];
 list.forEach(element => {
-    main.innerHTML = main.innerHTML + `<div class = "card"><h3>${element.title}</h3><br><p>${element.content}</p><br><button onClick = "deleteFucntion(event)" id = "${element.id}" class = "deleteButton">DELETE</button></div>`;
+    main.innerHTML = main.innerHTML + `<div class = "card"><h3>${element.title}</h3><br><p>${element.content}</p><br><button onClick = "deleteFucntion(event)" id = "${element.id}" class = "deleteButton">DELETE</button>&nbsp<button onClick = "viewItems(event)" class = "view" id = "${element.id}">VIEW</button></div>`;
 });
 header.after(main);
 main.style.display = `flex`;
@@ -56,4 +56,20 @@ const deleteFucntion = (event) => {
     card.splice(deletionIndex, 1);
     localStorage.setItem(`cardData`, `${JSON.stringify(card)}`);
     setTimeout(() => {location.reload()}, 500);
+}
+
+const viewItems = (event) => {
+    setTimeout(() => {View.style.display = `flex`;
+    let card = JSON.parse(localStorage.getItem(`cardData`)) || [];
+    let findIndex;
+    for(let i=0; i<card.length; i++){
+        if(card[i].id === event.target.id){
+            findIndex = i;
+        }
+    }
+    enlargedCard.innerHTML = `<h1>${card[findIndex].title}</h1><br><br><h3>${card[findIndex].content}</h3><br><button id = "elClose" onClick = "elCloseFunction()">CLOSE</button>`;}, 500);
+}
+
+const elCloseFunction = () => {
+    setTimeout(() => {View.style.display = `none`;}, 500);
 }
